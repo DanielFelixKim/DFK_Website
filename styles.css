@@ -1,0 +1,71 @@
+body{
+	font-family: 'Roboto', sans-serif;
+  padding-top: 120px; 
+}
+
+#namebanner{
+  background-color: #FFFFFF;
+  transition:all 1s;
+}
+
+.navname {
+  opacity:0;
+  transition:all 2s;
+}
+
+.mainpage{
+  opacity:0;
+  transition:all 2s;
+}
+
+.navlinks {
+  opacity:0;
+  transition:all .5s;
+  transform:translateY(-30%);
+}
+
+.active{
+  opacity:1;
+  transform:translateY(0%);
+}
+
+.navbar-default {
+    background-color: #FFFFFF;
+    border-color:  #FFFFFF;
+}
+
+.navbar .nav > li > a {
+    color: #000;
+    font-size: 20px;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+#dfk_pic{
+	height: 20%;
+	width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p{
+  font-size: 20px;
+}
+.project {
+  margin-top: 10px;
+}
