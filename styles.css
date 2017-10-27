@@ -1,11 +1,16 @@
 body{
 	font-family: 'Roboto', sans-serif;
-  padding-top: 120px; 
+  padding-top: 65px; 
+  background-color: #000;
+  color: #FFF;
 }
 
 #namebanner{
-  background-color: #FFFFFF;
+  background-color: #000;
   transition:all 1s;
+  display: flex;
+  align-items: center;
+  padding-top: 10%; 
 }
 
 .navname {
@@ -30,17 +35,21 @@ body{
 }
 
 .navbar-default {
-    background-color: #FFFFFF;
-    border-color:  #FFFFFF;
+    background-color: #2C3E50;
+    border-color: #2C3E50;
 }
 
 .navbar .nav > li > a {
-    color: #000;
-    font-size: 20px;
+    color: #FFF;
+    font-size: 25px;
+    margin-top: 15px;
+}
+.navbar .nav > li > a:hover {
+    color: #D1D0CD;
 }
 
 .navbar-default .navbar-brand {
-    color: #000;
+    color: #FFF;
     font-size: 40px;
     margin-top: 10px;
 }
@@ -51,20 +60,60 @@ body{
   vertical-align: top;
 }
 
+.navbar{
+  margin-bottom: 0px;
+}
+
 .navbar .navbar-collapse {
   text-align: center;
 }
 
+.blue-section{
+  background-color: #2980B9; 
+}
+
+.light-section{
+  background-color: #ECF0F1;
+}
+
+hr{
+  height: 5px;
+  width: 100px;
+  background-color: #00b7c7;
+}
+
+.light-header{
+  color: #2C3E50;
+}
+
+.container.section{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.content{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 #dfk_pic{
-	height: 20%;
-	width: 20%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	width: 80%;
+  height: auto;
+}
+
+.row{
+  margin-right: 0px;
+  margin-left: 0px;
+  }
+
+.intro-text{
+  width: 60%;
+  margin-top: 0px;
 }
 
 p{
-  font-size: 20px;
+  font-size: 1.15em;
+  color: #e7e7e7;
 }
 .project {
   margin-top: 10px;
