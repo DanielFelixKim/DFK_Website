@@ -83,8 +83,13 @@ body{
   text-align: center;
 }
 
-.blue-section{
+.dark-section{
   background-color: #191919;
+}
+
+.red-section{
+  background-color: #631712;
+  color:#FFF;
 }
 
 .light-section{
@@ -130,6 +135,7 @@ hr.black{
     background-size: cover;
     background-image: url(ggb.jpg);
     height: auto;
+    padding-bottom: 80px;
 }
 
 .container.section.exp-title{
@@ -152,14 +158,25 @@ hr.black{
   margin-top: 60px;
 }
 
-#nu{
-  width: 30%;
-  height: auto;
+.project-box{
+  background-color: #000;
+  padding: 15px;
+  min-height: 100%;
 }
 
-#ford{
-    width: 30%;
+.left-box{
+  padding-right: 15px;
+}
+
+.right-box{
+  padding-left: 15px;
+}
+
+
+.project-pic{
+  width: 100%;
   height: auto;
+  margin-bottom: 10px;
 }
 
 .row{
@@ -180,6 +197,6 @@ p{
 .dark-text{
   color: #191919;
 }
-.project {
-  margin-top: 10px;
+.project-row {
+  margin-bottom: 30px;
 }
