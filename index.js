@@ -5,6 +5,7 @@ const navLinks = document.querySelector('.navlinks');
 const mainPage = document.querySelector('.mainpage');
 const slideIns = document.querySelectorAll('.slide-in');
 const ggB = document.querySelector('.ggb');
+const projectBox = document.querySelectorAll('project-box');
 nameBanner.addEventListener('click', showNav);
 
 function debounce(func, wait = 14, immediate = true) {

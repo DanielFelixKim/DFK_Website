@@ -88,7 +88,7 @@ body{
 }
 
 .red-section{
-  background-color: #631712;
+  background-color: #000;
   color:#FFF;
 }
 
@@ -114,18 +114,14 @@ hr.black{
   border-top: 3px solid #191919;
 }
 
-.light-header{
-  color: #2C3E50;
-}
+.light-header{ color: #2C3E50; }
 
 .container.section{
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-.rob-slab{
-  font-family: 'Roboto Slab', serif;
-}
+.rob-slab{ font-family: 'Roboto Slab', serif; }
 
 .ggb {
     position: relative;
@@ -138,9 +134,7 @@ hr.black{
     padding-bottom: 80px;
 }
 
-.container.section.exp-title{
-  padding-bottom: 0px;
-}
+.container.section.exp-title{ padding-bottom: 0px; }
 
 .content{
   padding-left: 0px;
@@ -158,20 +152,34 @@ hr.black{
   margin-top: 60px;
 }
 
+.top-bar{
+	 background-color: #383838;
+   padding: 0px;
+   padding-left: 20px;
+   border-top-right-radius: 1em;
+   border-radius: 1em;
+}
+
+.rob-slab.bar{ margin-top: 10px; }
+
+.white.project{ margin-bottom:30px; }
+
 .project-box{
-  background-color: #000;
-  padding: 15px;
-  min-height: 100%;
+  padding: 25px;
+  padding-top: 10px;
+  height: 100%;
+  background-color: #191919;
+  border-radius: 1em;
+  transition: all .2s ease-in-out;
 }
 
-.left-box{
-  padding-right: 15px;
-}
+.project-box:hover { transform: scale(1.1); }
 
-.right-box{
-  padding-left: 15px;
-}
+.left-box{ padding-right: 15px; }
 
+.right-box{ padding-left: 15px; }
+
+.bar{ margin-bottom: 10px; }
 
 .project-pic{
   width: 100%;
@@ -183,6 +191,29 @@ hr.black{
   margin-right: 0px;
   margin-left: 0px;
   }
+
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
 
 .intro-text{
   width: 60%;
