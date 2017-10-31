@@ -1,8 +1,13 @@
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
+  	font-weight: 300;
   padding-top: 65px; 
   background-color: #000;
   color: #FFF;
+}
+
+b, strong {
+    font-weight: 500;
 }
 
 #namebanner{
@@ -83,8 +88,29 @@ body{
   text-align: center;
 }
 
-.dark-section{
-  background-color: #191919;
+.grey-section{ background-color: #191919;}
+
+.dark-section{ background-color: #191919;}
+
+#nu_full{
+  min-width: 100%;
+  height: auto;
+}
+
+.edu-section{
+  display: block;
+}
+
+.edu-info{
+  display: inline-block;
+}
+
+.tech-icons{
+	margin: 20px 0;
+}
+.img-tech{
+  width: auto;
+  height: 75px;
 }
 
 .red-section{
@@ -102,26 +128,28 @@ body{
 
 hr{
   height: 4px;
-  margin: 3px 0;
+  margin: 2px 0;
 }
 
 hr.white{
- 	border-top: 3px solid #ECF0F1;
+ 	border-top: 2px solid #ECF0F1;
   width: 100%;
 }
 
 hr.black{
-  border-top: 3px solid #191919;
+  border-top: 2px solid #191919;
 }
 
 .light-header{ color: #2C3E50; }
 
 .container.section{
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.rob-slab{ font-family: 'Roboto Slab', serif; }
+.rob-slab{ 
+  font-family: 'Lato', sans-serif;
+	font-weight: 300;}
 
 .ggb {
     position: relative;
@@ -186,6 +214,11 @@ hr.black{
   height: auto;
   margin-bottom: 10px;
 }
+.project-pic-two{
+  width: auto;
+  height: 160px;
+  margin-bottom: 10px;
+}
 
 .row{
   margin-right: 0px;
@@ -213,6 +246,17 @@ hr.black{
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+}
+
+.tech-boxes{
+  margin-top: 15px;
+}
+
+.tech-used{
+  border: 1.5px solid #e7e7e7;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 5px;
 }
 
 .intro-text{
