@@ -88,7 +88,9 @@ b, strong {
   text-align: center;
 }
 
-.grey-section{ background-color: #191919;}
+.grey-section{ 
+  background-color: #E6E6E8;
+	color: #191919;}
 
 .dark-section{ background-color: #191919;}
 
@@ -154,7 +156,7 @@ hr.black{
 .ggb {
     position: relative;
     background-attachment: fixed;
-    background-position: 0px 0px;;
+    background-position: 0px 0px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(ggb.jpg);

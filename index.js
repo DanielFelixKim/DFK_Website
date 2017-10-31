@@ -6,7 +6,16 @@ const mainPage = document.querySelector('.mainpage');
 const slideIns = document.querySelectorAll('.slide-in');
 const ggB = document.querySelector('.ggb');
 const projectBox = document.querySelectorAll('project-box');
+
+// Parallax
+var lastOffset = 0;
+const parallaxSlow = .1;
+const parallaxFast = .8;
+
+
 nameBanner.addEventListener('click', showNav);
+window.addEventListener('scroll', debounce(checkSlide));
+window.addEventListener('scroll', parallax);
 
 function debounce(func, wait = 14, immediate = true) {
   var timeout;
@@ -41,7 +50,26 @@ function checkSlide() {
   });
 }
 
-window.addEventListener('scroll', debounce(checkSlide));
+function parallax(){
+	const windowYOffset = window.scrollY + window.innerHeight;
+	const topWindow = window.scrollY + navBar.offsetHeight;
+	const ggbTop = ggB.offsetTop + navBar.offsetHeight;
+	const topscrollatGGB = topWindow - ggbTop;
+	const botscrollatGGB = windowYOffset - ggbTop;
+	const ggbOffset = 640-botscrollatGGB;
+	
+	if (windowYOffset > ggbTop && topWindow < ggbTop) {
+		ggB.style.setProperty('background-position', `0 ${ggbOffset}px`);
+		lastOffset = ggbOffset; 
+	}else if(topWindow > ggbTop){
+		ggB.style.setProperty('background-position', `0 ${lastOffset + topscrollatGGB*parallaxSlow}px`);
+	} else{
+		return;
+	}
+
+}
+
+
 
 function showNav(){
 
