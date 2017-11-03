@@ -62,24 +62,24 @@
     <div class="grey-section">
       <div class="container section">
           <div class="content-width-div">
-              <h1 class="rob-slab">Background</h1>
-              <hr class="white"/>
+              <h1 class="rob-slab"><b>Background</b></h1>
+              <hr class="black"/>
           </div>
           <div class="row"> 
             <div class="background-section col-md-4 content">
               <h2 class="rob-slab">Education</h2>
               <div class="edu-section">
                 <h3 class="rob-slab">Northwestern University</h3>
-              	<p>B.S. Electrical Engineering | 2017</p>
-              	<p>B.A. Music | Guitar and Composition | 2017</p>
+              	<p class="dark">B.S. Electrical Engineering | 2017</p>
+              	<p class="dark">B.A. Music | Guitar and Composition | 2017</p>
               </div>
               <div>
                 <h3 class="rob-slab">Berklee College of Music</h3>
-                <p class="rob-slab">Study Abroad | Jazz Composition | 2016-2017</p>
+                <p class="dark">Study Abroad | Jazz Composition | 2016-2017</p>
               </div>
             </div>
-            <div class="background-section col-md-6 content">
-              <h2 class="rob-slab">Skills</h2>
+            <div class="background-section col-md-8 content">
+              <h2 id="skills" class="rob-slab">Skills</h2>
               <div class="tech-icons row">
                 <div class="col-md-2 col-md-offset-1 content" align="center">
                   <img class="img-tech" src="tech/python.png">
@@ -170,7 +170,7 @@
           <div class="col-md-6 content left-box">
             <div class="project-box">
               <h3 class="rob-slab bar">Personal Website</h3>
-              <img class="project-pic" src="website.png">
+              <img class="project-pic" src="projects/website.png">
               <p>My first atttempt at my own personal website! I wanted to keep things straightforward and use HTML, CSS, Bootstrap and Javascript to share my work. I will certainly continue going through further iterations the more I learn!</p>
               <div class="tech-boxes">
 								<span class="tech-used">HTML</span>
@@ -183,7 +183,7 @@
           <div class="col-md-6 content right-box">
             <div class="project-box">
               <h3 class="rob-slab bar">Harmonious Monk</h3>
-              <img class="project-pic" src="hm.png">
+              <img class="project-pic" src="projects/hm.png">
               <p> For my final project in Machine Perception of Music and Audio, I led a team of three to develop a Python program which automatically transcribes a monophonic melody or speech and harmonizes the input with jazz piano chords.
               HM applies the Viterbi algorithm to hidden Markov models to determine the optimal chord progression </p>
               <div class="tech-boxes">
@@ -197,10 +197,41 @@
         <div class="row project-row is-flex">
           <div class="col-md-6 content left-box">
             <div class="project-box">
+              <h3 class="rob-slab bar">KFCams</h3>
+							<img id="kfcams" class="project-pic" src="projects/kfcams.png">	
+              <p> KFCams was my final design project at Northwestern. Using a custom built webcam on a PCB I designed in Eagle, my partner Fahad and I implemented face tracking using a Python OpenCV script on a Tornado server to actuate servos which panned and tilted the webcam to follow faces.</p>
+              <a href="projects/KFCamsReport.pdf" download><h4><b>Download the report:</b></h4></a>
+              <a class="rob-slab" href="https://github.com/fahadkh/kfcams"><h4><b>KFCams Repository: </b> <i class="fa fa-github fa-lg" aria-hidden="true"></i></h4></a>
+              <div class="tech-boxes">
+								<span class="tech-used">Python</span>
+                <span class="tech-used">C++</span>
+                <span class="tech-used">Eagle</span>
+                <span class="tech-used">3D Printing</span>
+              </div>
+          	</div>
+          </div>
+          <div class="col-md-6 content right-box">
+            <div class="project-box">
+              <h3 class="rob-slab bar">Android Line Following Robot</h3>
+              <video class="project-pic" src="projects/robot.mp4" autoplay="" loop="" playsinline=""></video>
+              <p>Taking Advanced Mechatronics exposed me to many digital communication protocols like SPI, I2C, and USB, while also providing me with skills in 3D printing, laser cutting and other rapid prototyping tools. The final project was a custom built robot that followed a line using image processing data sent from an Android phone to a PIC32 that powered the motors. </p>
+              <a class="rob-slab" href="https://github.com/DanielFelixKim/DFK_ME433_2017"><h4><b>ME433 Repository: </b> <i class="fa fa-github fa-lg" aria-hidden="true"></i></h4></a>
+              <div class="tech-boxes">
+								<span class="tech-used">C</span>
+                <span class="tech-used">Java</span>
+                <span class="tech-used">Android Studio</span>
+                <span class="tech-used">3D Printing</span>
+              </div>
+          	</div>
+          </div>
+        </div>
+        <div class="row project-row is-flex">
+          <div class="col-md-6 content left-box">
+            <div class="project-box">
               <h3 class="rob-slab bar">FPGA Tank Game</h3>
               <div>
-                <img class="project-pic-two" src="tank_game.png">
-              	<img class="project-pic-two" src="fpga.jpg">
+                <img class="project-pic-two" src="projects/tank_game.png">
+              	<img class="project-pic-two" src="projects/fpga.jpg">
             	</div>
               <p>In my FPGA design class at NU, for the final project I collaboratively developed a VHDL tank game on an Altera DE-115. We created tank and bullet components using finite state machines and tracked collision detection to keep track of the game score and state.</p>
               <div class="tech-boxes">
@@ -213,7 +244,7 @@
           <div class="col-md-6 content right-box">
             <div class="project-box">
               <h3 class="rob-slab bar">Android Robot</h3>
-              <img class="project-pic" src="website.png">
+              <img class="project-pic" src="">
               <p>
           	</div>
           </div>

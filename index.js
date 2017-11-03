@@ -3,9 +3,12 @@ const nameBanner = document.querySelector('#namebanner');
 const navName = document.querySelector('.navname');
 const navLinks = document.querySelector('.navlinks');
 const mainPage = document.querySelector('.mainpage');
-const slideIns = document.querySelectorAll('.slide-in');
+const slideIns = Array.from(document.querySelectorAll('.slide-in'));
+
 const ggB = document.querySelector('.ggb');
 const projectBox = document.querySelectorAll('project-box');
+
+console.log(slideIns);
 
 // Parallax
 var lastOffset = 0;
@@ -66,10 +69,7 @@ function parallax(){
 	} else{
 		return;
 	}
-
 }
-
-
 
 function showNav(){
 
