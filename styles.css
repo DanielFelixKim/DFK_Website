@@ -99,10 +99,11 @@ b, strong {
 }
 
 .grey-section { 
-  background-color: #E6E6E8;
+  background-image: url("light_background.png");
+  background-repeat: repeat-y;
 	color: #191919;
 	font-weight: 400;
-  }
+}
 
 .dark {
   font-weight: 400;
@@ -119,7 +120,7 @@ b, strong {
 
 .dark-section { 
   background-color: #191919;
-	height: 700px;}
+	}
 
 #nu_full{
   min-width: 100%;
@@ -250,6 +251,11 @@ hr.black{
 }
 
 #kfcams{
+  height: auto;
+  width: 90%;
+}
+
+#mech{
   height: auto;
   width: 90%;
 }

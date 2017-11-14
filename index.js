@@ -8,13 +8,10 @@ const slideIns = Array.from(document.querySelectorAll('.slide-in'));
 const ggB = document.querySelector('.ggb');
 const projectBox = document.querySelectorAll('project-box');
 
-console.log(slideIns);
-
 // Parallax
 var lastOffset = 0;
-const parallaxSlow = .1;
+const parallaxSlow = .01;
 const parallaxFast = .8;
-
 
 nameBanner.addEventListener('click', showNav);
 window.addEventListener('scroll', debounce(checkSlide));
@@ -59,7 +56,7 @@ function parallax(){
 	const ggbTop = ggB.offsetTop + navBar.offsetHeight;
 	const topscrollatGGB = topWindow - ggbTop;
 	const botscrollatGGB = windowYOffset - ggbTop;
-	const ggbOffset = 640-botscrollatGGB;
+	const ggbOffset = 600-botscrollatGGB;
 	
 	if (windowYOffset > ggbTop && topWindow < ggbTop) {
 		ggB.style.setProperty('background-position', `0 ${ggbOffset}px`);
