@@ -1,8 +1,4 @@
-const navBar = document.querySelector('.navbar');
 const nameBanner = document.querySelector('#namebanner');
-const navName = document.querySelector('.navname');
-const navLinks = document.querySelector('.navlinks');
-const mainPage = document.querySelector('.mainpage');
 const slideIns = Array.from(document.querySelectorAll('.slide-in'));
 
 const ggB = document.querySelector('.ggb');
@@ -13,7 +9,7 @@ var lastOffset = 0;
 const parallaxSlow = .01;
 const parallaxFast = .8;
 
-nameBanner.addEventListener('click', showNav);
+
 window.addEventListener('scroll', debounce(checkSlide));
 window.addEventListener('scroll', parallax);
 
@@ -68,18 +64,3 @@ function parallax(){
 	}
 }
 
-function showNav(){
-
-	nameBanner.classList.add('hidden');
-	navBar.classList.remove('hidden');
-	mainPage.classList.remove('hidden');
-
-	setTimeout(() => {
-	  navName.classList.add('active');
-      navLinks.classList.add('active');
-    }, 250);
-
-    setTimeout(() => {
-    	mainPage.classList.add('active');
-    }, 750);
-}

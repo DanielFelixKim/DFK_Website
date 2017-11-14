@@ -2,6 +2,14 @@
 	opacity: 0;
 }
 
+.initial-logo{
+	transform-origin: 50% bottom;
+}
+
 .firstStage{
 	transform-origin: 50% bottom;
+}
+
+#topK{
+	opacity: 0;
 }
