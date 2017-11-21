@@ -2,8 +2,8 @@
 	opacity: 0;
 }
 
-.initial-logo{
-	transform-origin: 50% bottom;
+.start-logo{
+	transform-origin: 50% 50% 0;
 }
 
 .firstStage{
@@ -11,5 +11,34 @@
 }
 
 #dfk-logo{
+	opacity: 1;
+	stroke: #FFF;
+	padding-top: 5%;
+}
+
+#start-logo{
 	opacity: 0;
+}
+
+/*#namebanner{
+  background-image: url("sf.jpg");
+  transition:all 1s;
+  align-items: center;
+  padding-top: 10%; 
+}
+*/
+#landing{
+	background: url("sf.jpg");
+	background-position: 0% 80%;
+	height:100vh;
+	width:auto;
+	background-size: cover;
+	text-align:center;
+	padding: 10%;
+	display:block;
+}
+
+#logo-div{
+	vertical-align:middle; 
+   	display: table-cell;
 }

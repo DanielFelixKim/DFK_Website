@@ -2,30 +2,44 @@ const navBar = document.querySelector('.navbar');
 const navName = document.querySelector('.navname');
 const navLinks = document.querySelector('.navlinks');
 const mainPage = document.querySelector('.mainpage');
-
+const landingPage = document.querySelector('#landing');
+const dLogo = document.querySelector('#dLogo');
 var animating = false;
+
+var startLogoX = landingPage.offsetWidth;
+
 
 
 //CenterLogo in the middle and appear
-$("#dfk-logo").velocity({ scaleY: 0, translateX: 480, translateY: 0, opacity: 1}, {duration: 0});
-$("#dfk-logo").velocity({ scaleY: 1}, {duration: 1000, delay: 500, easing: [500,20]});
+$(".start-logo").velocity({ scaleY: 0, translateX: 580, translateY: 0, opacity: 1}, {duration: 0});
+$(".start-logo").velocity({ scaleY: 1}, {duration: 1000, delay: 1000, easing: [500,20]});
+
+//Fan out K and F lines
+$("#botK").velocity({ rotateZ: 140, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 1500});
+$("#midF").velocity({ rotateZ: 90}, {duration: 1000, easing: [500,20], delay: 1500});
+$("#topK").velocity({ rotateZ: 50, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 1500});
 
 //Hide top F 
 $("#topF").velocity({ opacity: 0}, {duration: 0});
 
 //Shift rotated K lines
 function shiftLine(id, angle, z) {
-  x = -z * Math.cos((Math.PI*(180 - angle))/180);
-  y = -z * Math.cos((Math.PI*(90 - angle))/180);
-  if (id == "#botK" || id == "#topK") {
-  	y = y/1.2;
-  }
-  $(id).velocity({ translateX: `${x}`, translateY:`${y}`, opacity: 1, scaleY:1.2}, {duration: 1000,  easing: [200,20], delay: 0});
+	let scaleY = 1;
+	for (const value of z){
+	  	let x = -z * Math.cos((Math.PI*(180 - angle))/180);
+	  	let y = -z * Math.cos((Math.PI*(90 - angle))/180);
+		if (id == "#botK" || id == "#topK") {
+		  	y = y/1.2;
+		  	scaleY = 1.2;
+	  	}
+		$(id).velocity({ translateX: `${x}`, translateY:`${y}`, opacity: 1, scaleY:`${scaleY}`}, {duration: 1000,  easing: [200,20], delay: 0});
+ 	}
 }
 
 //Show Nav after animation
  function showNav(){
-	nameBanner.classList.add('hidden');
+	landingPage.classList.add('hidden');
+	document.getElementsByTagName("body")[0].setAttribute("style", "padding-top: 80");
 	navBar.classList.remove('hidden');
 	mainPage.classList.remove('hidden');
 
@@ -51,22 +65,20 @@ function animateLogo(){
 	$(".kimName").velocity({ translateX: -1000});
 
 	//Move left
-	$("#dfk-logo").velocity({ translateX: 0}, {duration: 1000, easing: [300,30]});
-
-	//Fan out K and F lines
-	$("#botK").velocity({ rotateZ: 140, scaleY: 1.2}, {duration: 1000, easing: [500,20]});
-	$("#midF").velocity({ rotateZ: 90}, {duration: 1000, easing: [500,20]});
-	$("#topK").velocity({ rotateZ: 50, scaleY: 1.2}, {duration: 1000, easing: [500,20]});
+	$(".start-logo").velocity({ translateX: 0}, {duration: 1000, easing: [300,30]});
+	shiftLine("#midF", 90, [0,580]);
+	shiftLine("#topK", 50, [0,1000]);
+	shiftLine("#botK", 140, [0, 1000]);
 
 	//Slide out F initials
 	$("#sideF").velocity({ translateX: 580, opacity: 1}, {duration: 1000, easing: [200,20], delay: 1000});
 	$("#topF").velocity({ translateX: 580, opacity:1}, {duration: 1000, easing: [200,20], delay: 1000, queue:false});
-	shiftLine("#midF", 90, 580);
+	shiftLine("#midF", 90, 580, 1000);
 
 	//Slide out K initials
 	$("#sideK").velocity({ translateX: 1000, opacity: 1}, {duration: 1000, easing: [200,20], delay: 1000});
-	shiftLine("#botK", 140, 1000);
-	shiftLine("#topK", 50, 1000);
+	//shiftLine("#botK", 140, 1000);
+	//shiftLine("#topK", 50, 1000);
 
 	//Scale K
 	$("#topK").velocity({ scaleY: 1.2}, {duration: 500, delay: 0});
@@ -79,7 +91,8 @@ function animateLogo(){
 	$(".kimName").velocity({ translateX: -90, opacity: 1}, {duration: 1000, easing: [200,20], delay: 700});
 
 	
-	$("#dfk-logo").velocity({ scaleX: 1}, {duration: 1500, delay: 500, complete: function() {showNav()}});
+	$("#dfk-logo").velocity({ scaleX: 1}, {duration: 2500, delay: 500, complete: function() {showNav()}});
+	//
 }
 
  $("#dfk-logo").click(animateLogo);
