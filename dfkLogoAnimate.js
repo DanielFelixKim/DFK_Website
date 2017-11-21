@@ -24,16 +24,12 @@ $("#topF").velocity({ opacity: 0}, {duration: 0});
 
 //Shift rotated K lines
 function shiftLine(id, angle, z) {
-	let scaleY = 1;
-	for (const value of z){
-	  	let x = -z * Math.cos((Math.PI*(180 - angle))/180);
-	  	let y = -z * Math.cos((Math.PI*(90 - angle))/180);
-		if (id == "#botK" || id == "#topK") {
-		  	y = y/1.2;
-		  	scaleY = 1.2;
-	  	}
-		$(id).velocity({ translateX: `${x}`, translateY:`${y}`, opacity: 1, scaleY:`${scaleY}`}, {duration: 1000,  easing: [200,20], delay: 0});
- 	}
+  x = -z * Math.cos((Math.PI*(180 - angle))/180);
+  y = -z * Math.cos((Math.PI*(90 - angle))/180);
+  if (id == "#botK" || id == "#topK") {
+  	y = y/1.2;
+  }
+  $(id).velocity({ translateX: x, translateY: y, opacity: 1, scaleY:1.2}, {duration: 1000,  easing: [200,20], delay: 0});
 }
 
 //Show Nav after animation
@@ -66,19 +62,23 @@ function animateLogo(){
 
 	//Move left
 	$(".start-logo").velocity({ translateX: 0}, {duration: 1000, easing: [300,30]});
-	shiftLine("#midF", 90, [0,580]);
-	shiftLine("#topK", 50, [0,1000]);
-	shiftLine("#botK", 140, [0, 1000]);
+	shiftLine("#midF", 90, 0);
+	shiftLine("#botK", 140, 0);
+	shiftLine("#topK", 50, 0);
+	
+	finishAnimate();
+}
 
+function finishAnimate(){
 	//Slide out F initials
 	$("#sideF").velocity({ translateX: 580, opacity: 1}, {duration: 1000, easing: [200,20], delay: 1000});
 	$("#topF").velocity({ translateX: 580, opacity:1}, {duration: 1000, easing: [200,20], delay: 1000, queue:false});
-	shiftLine("#midF", 90, 580, 1000);
+	shiftLine("#midF", 90, 580);
 
 	//Slide out K initials
 	$("#sideK").velocity({ translateX: 1000, opacity: 1}, {duration: 1000, easing: [200,20], delay: 1000});
-	//shiftLine("#botK", 140, 1000);
-	//shiftLine("#topK", 50, 1000);
+	shiftLine("#botK", 140, 1000);
+	shiftLine("#topK", 50, 1000);
 
 	//Scale K
 	$("#topK").velocity({ scaleY: 1.2}, {duration: 500, delay: 0});
@@ -92,7 +92,6 @@ function animateLogo(){
 
 	
 	$("#dfk-logo").velocity({ scaleX: 1}, {duration: 2500, delay: 500, complete: function() {showNav()}});
-	//
 }
 
  $("#dfk-logo").click(animateLogo);

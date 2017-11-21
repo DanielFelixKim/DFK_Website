@@ -91,7 +91,7 @@ b, strong {
 }
 
 .grey-section { 
-  background-image: url("light_background.png");
+  background-image: url("pics/light_background.png");
   background-repeat: repeat-y;
 	color: #191919;
 	font-weight: 400;
@@ -111,7 +111,7 @@ b, strong {
 }
 
 .dark-section { 
-    background-image: url("light_background.png");
+    background-image: url("pics/light_background.png");
   background-repeat: repeat-y;
 	color: #191919;
 	font-weight: 400;
@@ -182,7 +182,7 @@ hr.black{
     background-position: 0px 0px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(ggb.jpg);
+    background-image: url(pics/ggb.jpg);
     height: auto;
     padding-bottom: 80px;
 }
