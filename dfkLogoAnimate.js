@@ -32,10 +32,12 @@ function shiftLine(id, angle, z) {
   $(id).velocity({ translateX: x, translateY: y, opacity: 1, scaleY:1.2}, {duration: 1000,  easing: [200,20], delay: 0});
 }
 
+console.log(navBar.offsetTop);
+
 //Show Nav after animation
  function showNav(){
 	landingPage.classList.add('hidden');
-	document.getElementsByTagName("body")[0].setAttribute("style", "padding-top: 80");
+	document.getElementsByTagName("body")[0].setAttribute("style", "margin-top: 70px");
 	navBar.classList.remove('hidden');
 	mainPage.classList.remove('hidden');
 
@@ -65,11 +67,7 @@ function animateLogo(){
 	shiftLine("#midF", 90, 0);
 	shiftLine("#botK", 140, 0);
 	shiftLine("#topK", 50, 0);
-	
-	finishAnimate();
-}
 
-function finishAnimate(){
 	//Slide out F initials
 	$("#sideF").velocity({ translateX: 580, opacity: 1}, {duration: 1000, easing: [200,20], delay: 1000});
 	$("#topF").velocity({ translateX: 580, opacity:1}, {duration: 1000, easing: [200,20], delay: 1000, queue:false});
@@ -95,15 +93,3 @@ function finishAnimate(){
 }
 
  $("#dfk-logo").click(animateLogo);
-
-
-	// var animateInitials = [
-// 		{ e: $("#botK"), p: {  rotateZ: 140} , o: {duration: 1000} },
-// 		{ e: $("#midF"), p: { rotateZ: 90}, o: {duration:1000}},
-// 		{ e: $("#topK"), p: { rotateZ: 50}, o: {duration:1000}},
-// ];
-
-// $("#dfk-logo").on('click', function(event) {
-//   event.preventDefault();
-//   $.Velocity.RunSequence(animateInitials);
-// });

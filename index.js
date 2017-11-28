@@ -53,6 +53,7 @@ function parallax(){
 	const topscrollatGGB = topWindow - ggbTop;
 	const botscrollatGGB = windowYOffset - ggbTop;
 	const ggbOffset = 600-botscrollatGGB;
+	console.log(topscrollatGGB, botscrollatGGB, ggbTop);
 	
 	if (windowYOffset > ggbTop && topWindow < ggbTop) {
 		ggB.style.setProperty('background-position', `0 ${ggbOffset}px`);

@@ -1,13 +1,8 @@
 body{
-	font-family: 'Lato', sans-serif;
-  font-weight: 300;
+	font-family: 'Roboto', sans-serif;
   padding-top: 0px; 
   background-color: #FFF;
   color: #FFF;
-}
-
-b, strong {
-    font-weight: 500;
 }
 
 .navname {
@@ -80,6 +75,7 @@ b, strong {
 
 .navbar{
   margin-bottom: 0px;
+  min-height: 70px;
 }
 
 .content-width-div{
@@ -90,16 +86,15 @@ b, strong {
   text-align: center;
 }
 
-.grey-section { 
-  background-image: url("pics/light_background.png");
-  background-repeat: repeat-y;
-	color: #191919;
-	font-weight: 400;
+.dark-section { 
+	background-color: #111314;
+	color: #FFF;
 }
 
-.dark {
-  font-weight: 400;
-  color: #191919;
+.light-section{
+  background-image: url("pics/light_background.png");
+  background-repeat: repeat;
+  color: #000;
 }
 
 .background-section.col-md-4.content {
@@ -110,13 +105,6 @@ b, strong {
   margin-left: 30px;
 }
 
-.dark-section { 
-    background-image: url("pics/light_background.png");
-  background-repeat: repeat-y;
-	color: #191919;
-	font-weight: 400;
-	}
-
 #nu_full{
   min-width: 100%;
   height: auto;
@@ -124,6 +112,7 @@ b, strong {
 
 .edu-section{
   display: block;
+  margin-bottom: 10px;
 }
 
 .edu-info{
@@ -138,31 +127,11 @@ b, strong {
   height: 75px;
 }
 
-.red-section{
-  background-color: #000;
-  color:#FFF;
-}
-
-.light-section{
-  background-color:  #2980B9;
-}
-
-.ggb-section{
-  color:#FFF;
-}
-
 hr{
   height: 4px;
-  margin: 2px 0;
-}
-
-hr.white{
- 	border-top: 2px solid #ECF0F1;
+  margin: 1px 0;
+  border-top: 3px solid #0D47A1;
   width: 100%;
-}
-
-hr.black{
-  border-top: 2px solid #191919;
 }
 
 .light-header{ color: #2C3E50; }
@@ -172,19 +141,20 @@ hr.black{
   padding-bottom: 30px;
 }
 
-.rob-slab{ 
-  font-family: 'Lato', sans-serif;
-	font-weight: 300;}
+.raleway{ 
+  font-family: 'Raleway', sans-serif;
+}
 
 .ggb {
     position: relative;
     background-attachment: fixed;
-    background-position: 0px 0px;
+    background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(pics/ggb.jpg);
     height: auto;
-    padding-bottom: 80px;
+    padding-bottom: 10%;
+    color: #000;
 }
 
 .container.section.exp-title{ padding-bottom: 0px; }
@@ -200,9 +170,9 @@ hr.black{
 }
 
 #dfk_pic{
-	width: 80%;
+	width: 300px;
   height: auto;
-  margin-top: 60px;
+	vertical-align: middle;
 }
 
 .top-bar{
@@ -300,14 +270,6 @@ hr.black{
   margin-top: 0px;
 }
 
-p{
-  font-size: 1.15em;
-  color: #e7e7e7;
-}
-
-.dark-text{
-  color: #191919;
-}
 .project-row {
   margin-bottom: 30px;
 }
