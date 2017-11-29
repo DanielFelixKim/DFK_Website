@@ -64,7 +64,8 @@ body{
 .navbar-default .navbar-brand {
     color: #FFF;
     font-size: 40px;
-    margin-top: 10px;
+    margin-top: 0px;
+    padding:0;
 }
 
 .navbar .navbar-nav {
@@ -78,6 +79,13 @@ body{
   min-height: 70px;
 }
 
+#dfkLogoNav{
+	height:60px;
+  width: auto;
+  padding: 3px;
+  padding-top: 6px; 
+}
+
 .content-width-div{
   display: inline-block;
 }
@@ -89,6 +97,15 @@ body{
 .dark-section { 
 	background-color: #111314;
 	color: #FFF;
+}
+
+.dark-section.intro{ 
+	padding: 5% 0;
+}
+
+.intro-icon{
+  margin-right: 10px;
+  margin-top: 20px;
 }
 
 .light-section{
@@ -120,8 +137,9 @@ body{
 }
 
 .tech-icons{
-	margin: 20px 0;
+	margin: 40px 0;
 }
+
 .img-tech{
   width: auto;
   height: 75px;
@@ -134,7 +152,9 @@ hr{
   width: 100%;
 }
 
-.light-header{ color: #2C3E50; }
+h2{
+  margin-top: 10px;
+}
 
 .container.section{
   padding-top: 30px;
@@ -263,11 +283,6 @@ hr{
   padding: 5px;
   margin: 3px;
   border-radius: 5px;
-}
-
-.intro-text{
-  width: 60%;
-  margin-top: 0px;
 }
 
 .project-row {
