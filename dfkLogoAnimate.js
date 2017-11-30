@@ -37,7 +37,7 @@ console.log(navBar.offsetTop);
 //Show Nav after animation
  function showNav(){
 	landingPage.classList.add('hidden');
-	document.getElementsByTagName("body")[0].setAttribute("style", "margin-top: 70px");
+	document.getElementsByTagName("body")[0].setAttribute("style", "margin-top: 60px");
 	navBar.classList.remove('hidden');
 	mainPage.classList.remove('hidden');
 
