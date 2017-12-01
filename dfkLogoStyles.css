@@ -20,13 +20,6 @@
 	opacity: 0;
 }
 
-/*#namebanner{
-  background-image: url("sf.jpg");
-  transition:all 1s;
-  align-items: center;
-  padding-top: 10%; 
-}
-*/
 #landing{
 	background: url("pics/sf.jpg");
 	background-position: 0% 40%;

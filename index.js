@@ -6,14 +6,14 @@ const projectBox = document.querySelectorAll('project-box');
 
 // Parallax
 var lastOffset = 0;
-const parallaxSlow = .01;
+const parallaxSlow = .1
 const parallaxFast = .8;
 
 
 window.addEventListener('scroll', debounce(checkSlide));
 window.addEventListener('scroll', parallax);
 
-function debounce(func, wait = 14, immediate = true) {
+function debounce(func, wait=12, immediate = true) {
   var timeout;
   return function() {
     var context = this, args = arguments;
@@ -47,21 +47,23 @@ function checkSlide() {
 }
 
 function parallax(){
-	const windowYOffset = window.scrollY + window.innerHeight;
 	const topWindow = window.scrollY + navBar.offsetHeight;
 	const ggbTop = ggB.offsetTop + navBar.offsetHeight;
 	const topscrollatGGB = topWindow - ggbTop;
-	const botscrollatGGB = windowYOffset - ggbTop;
-	const ggbOffset = 600-botscrollatGGB;
-	console.log(topscrollatGGB, botscrollatGGB, ggbTop);
 	
-	if (windowYOffset > ggbTop && topWindow < ggbTop) {
-		ggB.style.setProperty('background-position', `0 ${ggbOffset}px`);
-		lastOffset = ggbOffset; 
-	}else if(topWindow > ggbTop){
+	if(topWindow > ggbTop){
 		ggB.style.setProperty('background-position', `0 ${lastOffset + topscrollatGGB*parallaxSlow}px`);
 	} else{
 		return;
 	}
 }
+
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - navBar.offsetHeight
+    }, 500);
+});
 

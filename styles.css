@@ -19,6 +19,7 @@ body{
   opacity:0;
   transition:all .5s;
   transform:translateY(-30%);
+  float: right;
 }
 
 .slide-in{
@@ -157,6 +158,10 @@ h2{
   margin-top: 10px;
 }
 
+h3{
+  margin-top: 0;
+}
+
 .container.section{
   padding-top: 30px;
   padding-bottom: 30px;
@@ -169,6 +174,7 @@ h2{
 .about-box{
   padding: 15px;
   margin-bottom: 50px;
+  display: flex;
 }
 
 .about-icon{
@@ -178,6 +184,16 @@ h2{
 .about-text{
   float: left;
   margin-right: 30px;
+}
+
+td {
+  padding-right: 10px;
+  text-align: left; 
+}
+
+th{
+    padding: 3px;
+    text-align: left;    
 }
 
 .about-text.right{
@@ -198,15 +214,23 @@ h2{
   color: #0D47A1;
 }
 
+.connect-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0D47A1;
+  display: block;
+  position: relative;
+  top: 125%
+}
+
 .ggb {
     position: relative;
     background-attachment: fixed;
-    background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(pics/ggb.jpg);
     height: auto;
-    padding-bottom: 10%;
     color: #000;
 }
 
@@ -226,6 +250,7 @@ h2{
 	width: 300px;
   height: auto;
 	vertical-align: middle;
+  margin-left: 30px;
 }
 
 .top-bar{
@@ -249,7 +274,7 @@ h2{
   transition: all .2s ease-in-out;
 }
 
-.project-box:hover { transform: scale(1.1); }
+.project-box:hover { transform: scale(1.05); }
 
 .left-box{ padding-right: 15px; }
 

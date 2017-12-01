@@ -10,8 +10,9 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/1b396cc9da.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/velocity/1.5/velocity.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.min.js"></script>
@@ -21,7 +22,6 @@
 </head>
 <body>
 	<div id="landing">
-    
     <svg id="dfk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1356.68 402">
       <title>dfkLogo</title>
       <g class="start-logo">
@@ -59,26 +59,20 @@
         <path class="nameLogo kimName" d="M1398.18,312h-15V261.38q0-5.73-.52-11.06a23.4,23.4,0,0,0-2.19-8.52,12.08,12.08,0,0,0-5.25-5.17q-3.42-1.75-9.87-1.75a27.9,27.9,0,0,0-12.57,3.14,77.1,77.1,0,0,0-12.58,8q.24,1.83.4,4.26t.16,4.81V312h-15V261.38q0-5.89-.52-11.18a23.3,23.3,0,0,0-2.19-8.48,11.86,11.86,0,0,0-5.25-5.13q-3.42-1.71-9.87-1.71a27.73,27.73,0,0,0-12.3,3,73.54,73.54,0,0,0-12.3,7.72V312h-15V223.1h15V233a65.77,65.77,0,0,1,14-9.07,34.56,34.56,0,0,1,14.84-3.26q9.07,0,15.4,3.82a23.57,23.57,0,0,1,9.43,10.59,74,74,0,0,1,16.55-11,38.38,38.38,0,0,1,16-3.38q14.64,0,21.61,8.87t7,24.79Z" fill="#FFF" transform="translate(-41.5 -100)"/>
       </g>
     </svg>
-   
-    
   </div>
-
-  <!-- <div class="container text-center" id="namebanner">
-		
-  </div> -->
   <nav class="navbar navbar-default navbar-fixed-top hidden">
     <div class="container ">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         </button>
-        <a class="navbar-brand navname raleway" href="#index"><img id="dfkLogoNav" src="pics/dfkLogo.png"></a>
+        <a class="navbar-brand navname raleway" href="#intro"><img id="dfkLogoNav" src="pics/dfkLogo.png"></a>
       </div>
       <div class="navlinks">
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right raleway">
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">EXPERIENCE</a></li>
-            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#">MUSIC</a></li>
             <li><a href="#">CONTACT</a></li>
           </ul>
@@ -87,7 +81,7 @@
     </div>
   </nav>
 	<div class="mainpage hidden">
-  	<div class="white-section intro">
+  	<div id="intro" class="white-section intro">
       <div class="container">
       	<div class="row">
           <div class="col-md-6 col-xs-12 intro-text">
@@ -112,20 +106,23 @@
         </div>
       </div>
     </div>
-    <div class="dark-section">
+    <div id="about" class="dark-section">
     	<div class="container">
         <div class="content-width-div">
           <h1 class="raleway ggb-section dark-text"><b>About Me</b></h1>
           <hr/>
         </div>
+        <svg>
+					<path id="about-line" fill="none" stroke="#0D47A1" stroke-width="5px"/>
+        </svg>
         <div class="about-box row">
-          <div class="about-icon col-md-2" align="center">
-            <span class="fa-stack fa-5x">
+          <div class="about-icon col-md-2 col-xs-12" align="center">
+            <span class="fa-stack fa-5x connect-point" >
               <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+              <i class="fa fa-graduation-cap fa-stack-1x fa-inverse" id="start-line"></i>
             </span>
           </div>
-          <div class="about-text-group col-md-10">
+          <div class="about-text-group col-md-10 col-xs-12">
             <h2 class="raleway"><b>Education</b></h2>
             <div class="about-text">
               <h3 class="raleway">Northwestern University</h3>
@@ -139,62 +136,66 @@
           </div>
         </div>
         <div class="about-box row">
-          <div class="about-text-group col-md-10">
-            <h2 class="raleway"><b>Skills</b></h2>
-            <div class="about-text right">
-							<ul class="skill-list">
-         				<li>Python</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Bootstrap</li>       
-              </ul>
-            </div>
-            <div class="about-text right">
-              <ul class="skill-list">
-         				<li>JavaScript</li>
-                <li>React</li>
-                <li>Redux</li>
-                <li>jQuert</li>       
-              </ul>
-            </div>
-            <div class="about-text right">
-              <ul class="skill-list">
-         				<li>Github</li>
-                <li>React</li>
-                <li>Redux</li>
-                <li>jQuert</li>       
-              </ul>
-            </div>
+          <div class="about-text-group col-md-8 col-xs-12">
+            <table class="about-text right">
+              <tr>
+                <th><h2 class="raleway"><b>Skills</b></h2></th>
+              </tr>
+              <tr>
+                <td>Python</td>
+                <td>JavaScript</td>
+                <td>Github</td>
+              </tr>
+              <tr>
+                <td>HTML</td>
+                <td>React</td>
+                <td>Node.js</td>
+              </tr>
+              <tr>
+                <td>CSS</td>
+                <td>Redux</td>
+                <td>PyCharm</td>
+              </tr>
+            	<tr>
+                <td>BootStrap</td>
+                <td>jQuery</td>
+                <td>Eagle</td>
+              </tr>         
+            </table>        
           </div>
-          <div class="about-icon col-md-2" align="center">
-            <span class="fa-stack fa-5x">
+          <div class="about-icon col-md-4 col-xs-12">
+            <span class="fa-stack fa-5x connect-point">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
             </span>
           </div>
         </div>
         <div class="about-box row">
-          <div class="about-icon col-md-2" align="center">
-						<span class="fa-stack fa-5x">
+          <div class="about-icon col-md-2 col-xs-12" align="center">
+						<span class="fa-stack fa-5x connect-point">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-music fa-stack-1x fa-inverse"></i>
             </span>
           </div>
-          <div class="about-text-group col-md-10">
+          <div class="about-text-group col-md-10 col-xs-12">
+            <h2 class="raleway"><b>Music and Fun Facts</b></h2>
             <div class="about-text">
-              <h3 class="raleway">Northwestern University</h3>
-            	<p class="dark">B.S. Electrical Engineering | 2017</p>
-            	<p class="dark">B.A. Music | Guitar and Composition | 2017</p>
+              <h3 class="raleway">Jazz Guitar</h3>
+            	<p class="dark">Studied with John Moulder at Northwestern</p>
+            	<p class="dark">Studied with Sheryl Bailey at Berklee</p>
+              <p class="dark">Check out my Instagram!</p>
             </div>
             <div class="about-text">
-              <h3 class="raleway">Berklee College of Music</h3>
-              <p class="dark">Study Abroad | Jazz Composition | 2016-2017</p>
+              <h3 class="raleway">What else?</h3>
+              <p class="dark">Coffee and burrito addict</p>
+              <p class="dark">Overwatch enthusiast</p>
+              <p class="dark">Tech gadgets nerd</p>
             </div>
           </div>
         </div>
       </div>   	
     </div>
-    <div class="ggb">
+    <div id="experience" class="ggb">
       <div class="container section exp-title">
         <div class="content-width-div slide-in">
           <h1 class="raleway ggb-section dark-text"><b>Experience</b></h1>
@@ -236,7 +237,7 @@
      		</div>
  			</div>
 		</div>
-    <div class="dark-section">
+    <div id="projects" class="dark-section">
       <div class="container section">
        	<div class="content-width-div">
           <h1 class="raleway">Projects</h1>
@@ -248,6 +249,7 @@
               <h3 class="raleway bar">NUSSL</h3>
               <img class="project-pic" src="projects/nmf.png">
               <p>As a developer on the Northwestern University Source Separation Library, I implemented algorithms such as the Degenerate Unmixing Estimation Technique (DUET) and Nonnegative Matrix Factorization.</p>
+              <a class="raleway" href="https://github.com/interactiveaudiolab/nussl"><h4><b>NUSSL Repository: </b> <i class="fa fa-github fa-lg" aria-hidden="true"></i></h4></a>
               <div class="tech-boxes">
 								<span class="tech-used">Python</span>
                 <span class="tech-used">NumPy</span>
@@ -259,7 +261,8 @@
             <div class="project-box">
               <h3 class="raleway bar">Personal Website</h3>
               <img class="project-pic" src="projects/website.png">
-              <p>My first atttempt at my own personal website! I wanted to keep things straightforward and use HTML, CSS, Bootstrap and Javascript to share my work. I will certainly continue going through further iterations the more I learn!</p>
+              <p>My first atttempt at my own personal website! I wanted to keep things straightforward and use HTML, CSS, Bootstrap and Javascript to share my work. I also designed a logo in Adobe Illustrator and animated it used jQuery and Velocity.js.</p>
+              <a class="raleway" href="https://github.com/DanielFelixKim/DFK_Website"><h4><b>Website Repository: </b> <i class="fa fa-github fa-lg" aria-hidden="true"></i></h4></a>
               <div class="tech-boxes">
 								<span class="tech-used">HTML</span>
                 <span class="tech-used">CSS</span>
@@ -307,6 +310,8 @@
               <img class="project-pic" src="projects/hm.png">
               <p> For my final project in Machine Perception of Music and Audio, I led a team of three to develop a Python program which automatically transcribes a monophonic melody or speech and harmonizes the input with jazz piano chords.
               HM applies the Viterbi algorithm to hidden Markov models to determine the optimal chord progression </p>
+              <a class="raleway" href="http://harmoniousmonk.info"><h4><b>Visit Harmonious Monk to learn more: </b></h4></a>
+              <a class="raleway" href="https://github.com/DanielFelixKim/HarmoniousMonk"><h4><b>HM Repository: </b> <i class="fa fa-github fa-lg" aria-hidden="true"></i></h4></a>
               <div class="tech-boxes">
 								<span class="tech-used">Python</span>
                 <span class="tech-used">NumPy</span>
@@ -322,6 +327,8 @@
               	<img class="project-pic-two" src="projects/fpga.jpg">
             	</div>
               <p>In my FPGA design class at NU, for the final project I collaboratively developed a VHDL tank game on an Altera DE-115. We created tank and bullet components using finite state machines and tracked collision detection to keep track of the game score and state.</p>
+              <a class="raleway" href="https://github.com/erichzawacki/355VHD"><h4><b>FPGA Repository: </b> <i class="fa fa-github fa-lg" aria-hidden="true"></i></h4></a>
+              <div class="tech-boxes">
               <div class="tech-boxes">
 								<span class="tech-used">VHDL</span>
                 <span class="tech-used">ModelSim</span>
