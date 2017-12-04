@@ -13,7 +13,7 @@ const parallaxFast = .8;
 window.addEventListener('scroll', debounce(checkSlide));
 window.addEventListener('scroll', parallax);
 
-function debounce(func, wait=12, immediate = true) {
+function debounce(func, wait=5, immediate = true) {
   var timeout;
   return function() {
     var context = this, args = arguments;
@@ -59,9 +59,9 @@ function parallax(){
 }
 
 
+//Nav scroll 
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
-
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top - navBar.offsetHeight
     }, 500);

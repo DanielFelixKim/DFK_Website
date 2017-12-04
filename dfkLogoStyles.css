@@ -13,7 +13,7 @@
 #dfk-logo{
 	opacity: 1;
 	stroke: #FFF;
-	padding-top: 5%;
+	padding-top: 5vh;
 }
 
 #start-logo{
@@ -27,7 +27,7 @@
 	width:auto;
 	background-size: cover;
 	text-align:center;
-	padding: 10%;
+	padding: 25vh 15vh;
 	display:block;
 }
 
