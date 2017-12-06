@@ -16,7 +16,6 @@
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/velocity/1.5/velocity.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.min.js"></script>
-  
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="dfkLogoStyles.css">
   <link rel="icon" id="web-icon" href="pics/blackdfkLogo.png">
@@ -61,24 +60,23 @@
       </g>
     </svg>
   </div>
-  <nav class="navbar navbar-default navbar-fixed-top hidden">
-    <div class="container ">
+  <nav class="navbar navbar-expand-lg navbar-fixed-top hidden">
+    <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        </button>
         <a class="navbar-brand navname raleway" href="#intro"><img id="dfkLogoNav" src="pics/dfkLogo.png"></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navToggle" aria-expanded="false" aria-controls="navToggle"> <i class="fa fa-2x fa-bars"></i>
+      </button>
       </div>
-      <div class="navlinks">
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right raleway">
+        <div class="collapse navbar-collapse navlinks" id="navToggle">
+          <ul class="nav navbar-nav navbar-right raleway mr-auto mt-2 mt-lg-0">
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#experience">EXPERIENCE</a></li>
             <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#music">MUSIC</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
         </div>
-      </div>
+      
     </div>
   </nav>
 	<div class="mainpage hidden">
@@ -137,7 +135,7 @@
           </div>
         </div>
         <div class="about-box row">
-          <div class="about-text-group col-md-8 col-xs-12 ">
+          <div class="about-text-group col-md-8 col-xs-12 col-s-12">
             <table class="about-text right">
               <tr>
                 <th><h2 class="raleway"><b>Skills</b></h2></th>
@@ -158,7 +156,7 @@
                 <th>PyCharm</th>
               </tr>
             	<tr>
-                <th>BootStrap</th>
+                <th>Bootstrap</th>
                 <th>jQuery</th>
                 <th>Eagle</th>
               </tr>         
@@ -265,10 +263,9 @@
               <p>My first atttempt at my own personal website! I wanted to keep things straightforward and use HTML, CSS, Bootstrap and Javascript to share my work. I also designed a logo in Adobe Illustrator and animated it used jQuery and Velocity.js.</p>
               <a class="raleway" href="https://github.com/DanielFelixKim/DFK_Website"><h4><b>Website Repository: </b> <i class="fa fa-github fa-lg" aria-hidden="true"></i></h4></a>
               <div class="tech-boxes">
-								<span class="tech-used">HTML</span>
-                <span class="tech-used">CSS</span>
-                <span class="tech-used">Bootstrap</span>
                 <span class="tech-used">JavaScript</span>
+                <span class="tech-used">Velocity.js</span>
+                <span class="tech-used">jQuery</span>
               </div>
           	</div>
           </div>
@@ -293,6 +290,7 @@
               <h3 class="raleway bar">KFCams</h3>
 							<img id="kfcams" class="project-pic" src="projects/kfcams.png">	
               <p> KFCams was my final design project at Northwestern. Using a custom built webcam on a PCB I designed in Eagle, my partner Fahad and I implemented face tracking using a Python OpenCV script on a Tornado server to actuate servos which panned and tilted the webcam to follow faces.</p>
+              <a class="raleway" href="http://kfcams.me"><h4><b>KFCams.me</b></h4></a>
               <a href="projects/KFCamsReport.pdf" download><h4><b>Download the report:</b></h4></a>
               <a class="raleway" href="https://github.com/fahadkh/kfcams"><h4><b>KFCams Repository: </b> <i class="fa fa-github fa-lg" aria-hidden="true"></i></h4></a>
               <div class="tech-boxes">
@@ -347,35 +345,100 @@
           <h1 class="raleway">Music</h1>
           <hr/>
       	</div>
-        <div class="row">
-          <div class="col-md-6 col-xs-12 intro-text">
-            <h2 class="raleway">
-              <b>I'm Daniel</b>, a software engineer and jazz musician.
-            </h2>
-            <p> As a recent graduate from Northwestern University with degrees in Electrical Engineering and in Music, I’m excited to go out into the world and start making a difference! </p>
-            <p> Here you'll find my portfolio, work experience, music and all kinds of information about me. Feel free to reach out about project ideas, musical collaboration, or just to chat!</p>
-          </div>
-          <div class="col-md-6 hidden-xs hidden-s">
-            <img id="dfk-guitar" class="img-circle" src="pics/dfkGuitar.jpg">
-          </div>
-        </div>
-      	<div class="row">
+      	<div class="row instagram-section">
           <div class="col-md-4 col-xs-12">
            <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:28.194444444444443% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BWYd6ejhzfk/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Daniel Felix (@dfkmusic)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-07-10T22:10:05+00:00">Jul 10, 2017 at 3:10pm PDT</time></p></div></blockquote> <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
            <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:28.194444444444443% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BWbG-NWhuxp/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Daniel Felix (@dfkmusic)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-07-11T22:47:20+00:00">Jul 11, 2017 at 3:47pm PDT</time></p></div></blockquote> <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
           </div>
           <div class="col-md-4 col-xs-12" align="center">
           	 <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BCfxvZ0Ey5h/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Daniel Felix (@dfkmusic)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-03-03T15:50:08+00:00">Mar 3, 2016 at 7:50am PST</time></p></div></blockquote> <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
-             <div class="col-md-12 hidden-s hidden-xs">
-               <a class="raleway" href="https://instagram.com/dfkmusic"><h3 id="insta-link"><b>See more Instagram posts here! </b> <i class="fa fa-instagram fa-lg" aria-hidden="true"></i></h3></a>
+             <div class="col-md-12 hidden-s hidden-xs insta-links">
+               <a class="raleway" href="https://instagram.com/dfkmusic"><h3 id="insta-link"><b>See more Instagram</b></h3><h3 id="insta-link"><b>posts here!</b></h3></a>
              </div>
           </div>
         	<div class="col-md-4 col-xs-12">
             <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:62.5% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BHQDm08g1Ve/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Daniel Felix (@dfkmusic)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-06-29T19:55:22+00:00">Jun 29, 2016 at 12:55pm PDT</time></p></div></blockquote> <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
           </div>
         </div>
+        <div class="content-width-div">
+          <h2 class="raleway">Soundcloud</h2>
+          <hr/>
+        </div>
         <div class="soundcloud-row">
-        	 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/92953134&amp;color=%230d47a1&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>        
+					<div class="soundcloud-frame"></div>       
+        </div>
+        <div class="compositions-intro">
+          <div class="content-width-div">
+              <h2 class="raleway">Selected Compositions</h2>
+              <hr/>
+          </div>
+        </div>
+        <div class="row scores-row">
+        	<div class="col-md-4 col-xs-12">
+            <h3 class="raleway">A Sketch of Courage</h3>
+            <p class="raleway">A piece for orchestra, written for the Northwestern Contemporary Music Ensemble in my Advanced Orchestration class. Here I explored orchestration techniques as well as odd time signatures.</p>
+            <div class="score-container">
+              <img class="score-thumbnail" src="music/a_sketch_of_courage_thumbnail.png">
+              <a href="music/a_sketch_of_courage.pdf" download>
+                <div class="score-overlay">
+                  <div class="download-icon">
+                    <i class="fa fa-cloud-download fa-3x" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </div>  
+        	</div>
+          <div class="col-md-4 col-xs-12">
+            <h3 class="raleway">Have You Met Miss Jones?</h3>
+            <p class="raleway">An arragement of this tune for 5 horns, written for my Chord Scale Voicings for Arranging class at Berklee taught by Bill Scism. I made use of spread voicings, 3 horn soli, and 5 part tutti.</p>
+            <div class="score-container">
+              <img class="score-thumbnail" src="music/have_you_met_miss_jones.PNG">
+              <a href="music/have_you_met_miss_jones.pdf" download>
+                <div class="score-overlay">
+                  <div class="download-icon">
+                    <i class="fa fa-cloud-download fa-3x" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </div> 
+          </div>
+        	<div class="col-md-4 col-xs-12">
+            <h3 class="raleway">'This Thing Called Love?</h3>
+            <p class="raleway">An final project arragement for 6 horns, also written for class at Berklee. I used six part 4 way close voicings, kicks with upper structure triads, clusters, and more to cover a wide range of techniques.</p>
+            <div class="score-container">
+              <img class="score-thumbnail" src="music/what_is_this_thing_called_love_score.PNG">
+              <a href="music/what_is_this_thing_called_love.pdf" download>
+                <div class="score-overlay">
+                  <div class="download-icon">
+                    <i class="fa fa-cloud-download fa-3x" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </div>       
+      	 	</div>
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="dark-section">
+  		<div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="music-links-row">
+              <h3 class="raleway">Follow my music: </h3>
+              <a href="https://instagram.com/dfkmusic"><i class="fa fa-instagram fa-3x contact-bottom" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com/user/DFKMusic"><i class="fa fa-youtube-play fa-3x contact-bottom" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/danielfelixkimmusic"><i class="fa fa-facebook fa-3x contact-bottom" aria-hidden="true"></i></a>
+              <a href="https://www.soundcloud.com/danielfkmusic"><i class="fa fa-soundcloud fa-3x contact-bottom" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="music-links-row">
+              <h3 class="raleway">Get in touch: </h3>
+              <a href="https://github.com/DanielFelixKim"><i class="fa fa-github-square fa-3x contact-bottom" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/danielfelixkim/"><i class="fa fa-linkedin-square fa-3x contact-bottom" aria-hidden="true"></i></a>
+              <a href="mailto:daniel.felixkim@gmail.com"><i class="fa fa-envelope-o fa-3x contact-bottom" aria-hidden="true"></i></a> 
+            </div>
+          </div>
         </div>
       </div>
     </div>

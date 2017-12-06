@@ -38,7 +38,7 @@ function shiftLine(id, angle, z) {
 //Show Nav after animation
  function showNav(){
 	landingPage.classList.add('hidden');
-	document.getElementsByTagName("body")[0].setAttribute("style", "margin-top: 57px");
+	document.getElementsByTagName("body")[0].setAttribute("style", "margin-top: 60px");
 	navBar.classList.remove('hidden');
 	mainPage.classList.remove('hidden');
 
@@ -50,6 +50,8 @@ function shiftLine(id, angle, z) {
     setTimeout(() => {
     	mainPage.classList.add('active');
     }, 750);
+
+    loadSoundCloud();
 }
 
 function animateLogo(){
@@ -93,5 +95,17 @@ function animateLogo(){
 	$("#dfk-logo").velocity({ scaleX: 1}, {duration: 2500, delay: 500, complete: function() {showNav()}});
 }
 
- $("#dfk-logo").click(animateLogo);
+ $("#landing").click(animateLogo);
 
+
+//Load SoundCloud when page is ready
+function loadSoundCloud(){
+	$('<iframe>', {
+   src: `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/92953134&amp;
+   		 color=%230d47a1&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;
+   		 show_user=true&amp;show_reposts=false&amp;show_teaser=true`,
+   width:"100%",
+   height:"450",
+   frameborder:"no"
+   }).appendTo('.soundcloud-frame');
+}

@@ -23,7 +23,6 @@ body{
   opacity:0;
   transition:all .5s;
   transform:translateY(-30%);
-  float: right;
 }
 
 .slide-in{
@@ -52,7 +51,7 @@ body{
   transform:translateX(0%);
 }
 
-.navbar-default {
+.navbar{
     background-color: #000;
     border-color: #000;
 }
@@ -67,12 +66,19 @@ body{
     padding: 20px;
 }
 .navbar .nav > li > a:hover {
-    color: #D1D0CD;
+    color: #111314;
 }
 
-.navbar-default .navbar-brand {
-    color: #FFF;
-    font-size: 40px;
+.navbar .nav > li > a:active {
+    color: #000;
+}
+
+.navbar .nav > li > a:focus {
+  background-color: #000;
+  color: #FFF
+}
+
+.navbar-brand {
     padding: 5px;
 }
 
@@ -199,9 +205,9 @@ th{
     padding: 3px;
     text-align: left;
     font-family: 'Raleway', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
-  	padding-left: 30px;
+  	padding-left: 15px;
 }
 
 .about-text.right{
@@ -309,9 +315,13 @@ th{
   width: 90%;
 }
 
+.insta-links{
+  margin-top: 20px;
+}
+
 #insta-link{
   color: #000;
-  margin-top: 30px;
+  margin: 0 0;
   line-height: 1.3;
 }
 
@@ -348,9 +358,8 @@ th{
     -ms-flex-direction: column;
     flex-direction: column;
 }
-
 .tech-boxes{
-  margin-top: 15px;
+    margin-top: 20px;
 }
 
 .tech-used{
@@ -364,6 +373,77 @@ th{
   margin-bottom: 30px;
 }
 
+.instagram-section{
+	margin-bottom: 20px;
+}
+
 .soundcloud-row{
-  padding: 30px 12px;
+  padding: 20px 12px;
+}
+
+.score-thumbnail{
+  width: 100%;
+  height: auto;
+}
+
+.score-title{
+  height: 45px;
+  width: 100%;
+}
+
+.scores-row{
+  margin-bottom: 30px;
+}
+
+.score-container{
+  position: relative;
+}
+
+.compositions-intro{
+  margin-bottom: 20px;
+}
+
+.score-overlay{
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.score-container:hover .score-overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.download-icon{
+  white-space: nowrap; 
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.music-links-row{
+  text-align: center;
+  padding: 10px;
+}
+
+.contact-bottom{
+  padding: 10px;
+  color: #000;
+  transition: .5s ease;
+  color: #0D47A1;
+}
+
+.contact-bottom:hover{
+  transform: scale(1.2);
+  transform: translateY(-10px);
 }

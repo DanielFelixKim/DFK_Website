@@ -6,14 +6,14 @@ const projectBox = document.querySelectorAll('project-box');
 
 // Parallax
 var lastOffset = 0;
-const parallaxSlow = .1
+const parallaxSlow = .05;
 const parallaxFast = .8;
 
 
 window.addEventListener('scroll', debounce(checkSlide));
 window.addEventListener('scroll', parallax);
 
-function debounce(func, wait=5, immediate = true) {
+function debounce(func, wait=10, immediate = true) {
   var timeout;
   return function() {
     var context = this, args = arguments;
@@ -66,4 +66,3 @@ $(document).on('click', 'a[href^="#"]', function (event) {
         scrollTop: $($.attr(this, 'href')).offset().top - navBar.offsetHeight
     }, 500);
 });
-
