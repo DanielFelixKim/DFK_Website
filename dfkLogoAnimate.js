@@ -13,12 +13,12 @@ var firstStageDone = false;
 
 //CenterLogo in the middle and appear
 $(".start-logo").velocity({ scaleY: 0, translateX: 580, translateY: 0, opacity: 1}, {duration: 0});
-$(".start-logo").velocity({ scaleY: 1}, {duration: 1000, delay: 1000, easing: [500,20]});
+$(".start-logo").velocity({ scaleY: 1}, {duration: 1000, delay: 1500, easing: [500,20]});
 
 //Fan out K and F lines
-$("#botK").velocity({ rotateZ: 140, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 1500});
-$("#midF").velocity({ rotateZ: 90}, {duration: 1000, easing: [500,20], delay: 1500});
-$("#topK").velocity({ rotateZ: 50, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 1500, complete: function(){animateLogo()}});
+$("#botK").velocity({ rotateZ: 140, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 2000});
+$("#midF").velocity({ rotateZ: 90}, {duration: 1000, easing: [500,20], delay: 2000});
+$("#topK").velocity({ rotateZ: 50, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 2000, complete: function(){animateLogo()}});
 
 //Hide top F 
 $("#topF").velocity({ opacity: 0}, {duration: 0});
@@ -87,7 +87,7 @@ function animateLogo(){
 	$(".felixName").velocity({ translateX: -50, opacity: 1}, {duration: 1000, easing: [200,20], delay: 700});
 	$(".kimName").velocity({ translateX: -90, opacity: 1}, {duration: 1000, easing: [200,20], delay: 700});
 
-	$("#dfk-logo").velocity({ scaleX: 1}, {duration: 2500, delay: 500, complete: function() {showNav()}});
+	$("#dfk-logo").velocity({ scaleX: 1}, {duration: 3000, delay: 500, complete: function() {showNav()}});
 }
 
 
