@@ -16,9 +16,12 @@ $(".start-logo").velocity({ scaleY: 0, translateX: 580, translateY: 0, opacity: 
 $(".start-logo").velocity({ scaleY: 1}, {duration: 1000, delay: 1500, easing: [500,20]});
 
 //Fan out K and F lines
-$("#botK").velocity({ rotateZ: 140, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 2000});
-$("#midF").velocity({ rotateZ: 90}, {duration: 1000, easing: [500,20], delay: 2000});
-$("#topK").velocity({ rotateZ: 50, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 2000, complete: function(){animateLogo()}});
+$( document ).ready(function() {
+	$("#botK").velocity({ rotateZ: 140, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 2000});
+	$("#midF").velocity({ rotateZ: 90}, {duration: 1000, easing: [500,20], delay: 2000});
+	$("#topK").velocity({ rotateZ: 50, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 2000, complete: function(){animateLogo()}});
+});
+
 
 //Hide top F 
 $("#topF").velocity({ opacity: 0}, {duration: 0});
