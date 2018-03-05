@@ -3,17 +3,16 @@
 }
 
 .start-logo{
-	transform-origin: 50% 50% 0;
+	transform-origin: 50% 25%;
 }
 
 .firstStage{
-	transform-origin: 50% bottom;
+	transform-origin: 3% 28%;
 }
 
 #dfk-logo{
 	opacity: 1;
 	stroke: #FFF;
-	padding-top: 5vh;
 }
 
 #start-logo{

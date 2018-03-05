@@ -5,28 +5,22 @@ const mainPage = document.querySelector('.mainpage');
 const landingPage = document.querySelector('#landing');
 const dLogo = document.querySelector('#dLogo');
 
-
 var startLogoX = landingPage.offsetWidth;
 var firstStageDone = false;
 
-
-
 //CenterLogo in the middle and appear
 $(".start-logo").velocity({ scaleY: 0, translateX: 580, translateY: 0, opacity: 1}, {duration: 0});
-$(".start-logo").velocity({ scaleY: 1}, {duration: 1000, delay: 1500, easing: [500,20]});
+$(".start-logo").velocity({ scaleY: 1}, {duration: 1000, delay: 1500, easing: [200,20]});
 
 //Fan out K and F lines
 $( document ).ready(function() {
-	$("#botK").velocity({ rotateZ: 140, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 2000});
-	$("#midF").velocity({ rotateZ: 90}, {duration: 1000, easing: [500,20], delay: 2000});
-	$("#topK").velocity({ rotateZ: 50, scaleY: 1.2}, {duration: 1000, easing: [500,20], delay: 2000, complete: function(){animateLogo()}});
+	$("#botK").velocity({ rotateZ: 140, scaleY: 1.2}, {duration: 1000, easing: [200,20], delay: 2000});
+	$("#midF").velocity({ rotateZ: 90}, {duration: 1000, easing: [200,20], delay: 2000});
+	$("#topK").velocity({ rotateZ: 50, scaleY: 1.2}, {duration: 1000, easing: [200,20], delay: 2000, complete: function(){animateLogo()}});
 });
-
 
 //Hide top F 
 $("#topF").velocity({ opacity: 0}, {duration: 0});
-
-
 
 //Shift rotated K lines
 function shiftLine(id, angle, z) {
