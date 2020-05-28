@@ -447,3 +447,9 @@ th{
   transform: scale(1.2);
   transform: translateY(-10px);
 }
+
+#contact{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
